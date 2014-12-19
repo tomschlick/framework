@@ -50,9 +50,9 @@ class Arr {
 	 * Check if the value is in the blacklist
 	 * If so return default, otherwise return value
 	 *
-	 * @param  string 	$value
-	 * @param  array  	$blacklist
-	 * @param  mixed    $default
+	 * @param  string  $value
+	 * @param  array   $blacklist
+	 * @param  mixed   $default
 	 * @return string
 	 */
 	public static function blacklist($value, $blacklist, $default = null)
@@ -401,9 +401,9 @@ class Arr {
 	 * Check if the value is in the whitelist
 	 * If so return value, otherwise return default
 	 *
-	 * @param  string 	$value
-	 * @param  array  	$whitelist
-	 * @param  mixed    $default
+	 * @param  string  $value
+	 * @param  array   $whitelist
+	 * @param  mixed   $default
 	 * @return string
 	 */
 	public static function whitelist($value, $whitelist, $default = null)
