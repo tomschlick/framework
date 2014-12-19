@@ -10,6 +10,12 @@ class SupportHelpersTest extends PHPUnit_Framework_TestCase {
 		}));
 	}
 
+	public function testArrayBlacklist()
+	{
+		$this->assertEquals(null, array_blacklist('foo', ['foo', 'bar', 'baz']));
+		$this->assertEquals('default', array_blacklist('foo', ['foo', 'bar', 'baz'], 'default'));
+		$this->assertEquals('foo', array_blacklist('foo', ['bar', 'baz']));
+	}
 
 	public function testArrayDot()
 	{
@@ -44,6 +50,12 @@ class SupportHelpersTest extends PHPUnit_Framework_TestCase {
 		$this->assertEquals('taylor', $array['names']['developer']);
 	}
 
+	public function testArrayWhitelist()
+	{
+		$this->assertEquals('foo', array_whitelist('foo', ['foo', 'bar', 'baz']));
+		$this->assertEquals('default', array_whitelist('foo', ['bar', 'baz'], 'default'));
+		$this->assertEquals(null, array_whitelist('foo', ['bar', 'baz']));
+	}
 
 	public function testArrayForget()
 	{

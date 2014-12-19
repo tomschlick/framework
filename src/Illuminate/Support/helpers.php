@@ -226,6 +226,23 @@ if ( ! function_exists('array_only'))
 	}
 }
 
+if ( ! function_exists('array_whitelist'))
+{
+	/**
+	 * Check if the value is in the whitelist
+	 * If so return value, otherwise return default
+	 *
+	 * @param  string 	$value
+	 * @param  array  	$whitelist
+	 * @param  mixed    $default
+	 * @return array
+	 */
+	function array_whitelist($value, $whitelist, $default = null)
+	{
+		return Arr::whitelist(($value, $whitelist, $default);
+	}
+}
+
 if ( ! function_exists('array_pluck'))
 {
 	/**
